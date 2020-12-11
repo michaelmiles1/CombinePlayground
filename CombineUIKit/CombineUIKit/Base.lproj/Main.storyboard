@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CombineUIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="Allow Messages" translatesAutoresizingMaskIntoConstraints="NO" id="1yL-FO-W0a">
+                                <rect key="frame" x="182.5" y="113" width="51" height="31"/>
+                                <connections>
+                                    <action selector="didSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="VGy-oY-hzX"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow Messages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7E-Bo-i8t">
+                                <rect key="frame" x="145.5" y="84" width="123" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lel-m1-QY7">
+                                <rect key="frame" x="152.5" y="204" width="109" height="30"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <state key="normal" title="Send Messages"/>
+                                <connections>
+                                    <action selector="sendMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6z6-le-czy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Message Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KtC-Xy-Ope">
+                                <rect key="frame" x="132.5" y="314" width="149" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1yL-FO-W0a" firstAttribute="top" secondItem="g7E-Bo-i8t" secondAttribute="bottom" constant="8" id="2bp-Of-g6h"/>
+                            <constraint firstItem="g7E-Bo-i8t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4eY-0b-Zs7"/>
+                            <constraint firstItem="KtC-Xy-Ope" firstAttribute="top" secondItem="Lel-m1-QY7" secondAttribute="bottom" constant="80" id="JS3-B2-AvM"/>
+                            <constraint firstItem="Lel-m1-QY7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L9N-cZ-AvI"/>
+                            <constraint firstItem="Lel-m1-QY7" firstAttribute="top" secondItem="1yL-FO-W0a" secondAttribute="bottom" constant="60" id="V7h-Ld-Ieb"/>
+                            <constraint firstItem="1yL-FO-W0a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ivT-gk-zaN"/>
+                            <constraint firstItem="g7E-Bo-i8t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="n5Y-b0-PDQ"/>
+                            <constraint firstItem="KtC-Xy-Ope" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="swW-d1-Woi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="allowMessagesSwitch" destination="1yL-FO-W0a" id="AA5-sD-xxc"/>
+                        <outlet property="messageLabel" destination="KtC-Xy-Ope" id="RQj-c1-3zv"/>
+                        <outlet property="sendButton" destination="Lel-m1-QY7" id="0BN-P4-8Zt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749" y="121"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
